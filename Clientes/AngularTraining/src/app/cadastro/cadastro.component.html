@@ -1,0 +1,64 @@
+<div class="container">
+
+  <div class="container bg-white shadow-sm mt-4 p-5">
+    <h1> Preencha os dados </h1>
+    <form>
+      <div class="form-row mt-5">
+        <div class="form-group col-md-6">
+          <label for="inputNome">Nome Completo</label>
+          <input type="text" class="form-control" id="inputNome" placeholder="Nome Completo">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="@Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEndereco">Endereço</label>
+        <input type="text" class="form-control" id="inputEndereco" placeholder="Rua dos Bobos, nº 0">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputTelefone">Telefone</label>
+          <input type="text" class="form-control" id="inputTelefone">
+        </div>
+      </div>
+      <div class="form-group">
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid bg-white ">
+  <h1>Clientes</h1>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Endereço</th>
+          <th>Telefone</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clientes">
+          <td scope="row">{{client.nome}}</td>
+          <td>{{client.email}}</td>
+          <td>{{client.endereco}}</td>
+          <td>{{client.telefone}}</td>
+        </tr>
+        <tr>
+          <td scope="row"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
